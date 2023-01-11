@@ -65,7 +65,6 @@ def delete_fruit(request, id: int):
         if fruit['id'] == id:
             # delete the object if exist then write into json file
             all_fruits.remove(fruit)
-            print(all_fruits)
             write_fruit(all_fruits)
             return 202, {'msg': 'Deleted successfully'}
     return 404, {'msg': 'This id is not exist'}
