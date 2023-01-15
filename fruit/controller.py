@@ -8,13 +8,13 @@ api_controller = NinjaAPI()
 
 # load data from json file
 def load_fruit():
-    with open('fruit/fruit_data.json', 'r') as f:
+    with open('fruit/fruit_data.json', 'r',  encoding="utf8") as f:
         return json.load(f)
 
 
 # write data into json file considering the emoji and indent (new line)
 def write_fruit(fruit):
-    with open('fruit/fruit_data.json', 'w') as write_json:
+    with open('fruit/fruit_data.json', 'w',  encoding="utf8") as write_json:
         json.dump(fruit, write_json, ensure_ascii=False, indent=2)
 
 
